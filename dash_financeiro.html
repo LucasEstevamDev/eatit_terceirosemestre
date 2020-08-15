@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eatit</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+        
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+        
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+        
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+        
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+        
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-white">DASHBOARD</div>
+            <div class="list-group list-group-flush">
+                <a href="dash_financeiro.html" class="list-group-item list-group-item-action bg-dark text-white">FINANCEIRO</a>
+
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <button class="btn btn-dark" id="menu-toggle">
+                    <i class="material-icons">insert_chart_outlined</i>
+                </button>
+                <a class="navbar-brand h1 offset-md-5" href="">
+                    <img src="img/eat_it_branco.png" width="50px">
+                </a>
+
+                <button class="navbar-toggler btn-dark bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <button class="btn btn-light mr-sm-2" onclick="history.back()">Voltar</button>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid" id="financeiro">
+                <br>
+                <div class="card-deck">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Vendas</h5>
+                            <h1 class="text-primary">964</h1>
+                            <small class="card-subtitle mb-2 text-muted">Debitadas em caixa</small>
+                        </div>
+                    </div>
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Caixa</h5>
+                            <h1 class="text-success">R$ 1.250,50</h1>
+                            <small class="card-subtitle mb-2 text-muted">Líquido em caixa</small>
+                        </div>
+                    </div>
+                    <div class="card border-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Imposto retido</h5>
+                            <h1 class="text-danger">R$ 250,20</h1>
+                            <small class="card-subtitle mb-2 text-muted">Já declarados</small>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card-deck">
+                    <div class="card" style="width: 32rem;">
+                        <img class="card-img" src="img/Vendas.png" alt="Vendas por mês">
+                        <div class="card-img-overlay">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="width: 32rem;">
+                        <img class="card-img" src="img/vendas_semana.png" alt="Frequência de vendas">
+                        <div class="card-img-overlay">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="popper.js/dist/umd/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+</html>

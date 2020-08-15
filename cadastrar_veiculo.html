@@ -1,0 +1,113 @@
+<!-- CONTATO -->
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eatit</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item offset-md-1"><a href="#" onclick="history.back()" class="text-dark">Início</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="history.back()" class="text-dark">Cadastro</a></li>
+                <li class="breadcrumb-item">Veículo</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="card col-md-8 offset-md-2 ">
+        <div class="card-body">
+        </div>
+        <div class="col-md-8 offset-md-2">
+            <h2>Insira os dados do seu veículo</h2>
+            <small id="passwordHelpBlock" class="form-text text-muted">
+                    <span class="erro">Campos obrigatórios*</span>
+                 </small>
+        </div>
+        <br>
+        <form id="form">
+            <div id="format_cadastro_usuario">
+                <div class="form-group">
+                    <div class="col-md-8 offset-md-2">
+                        <input type="text" class="form-control" id="inputPlaca" name="fname" placeholder="Placa*" onkeypress="mascara(this, '###-####')" maxlength="8">
+                        <span id="erroPlaca"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 offset-md-2">
+                        <input type="text" class="form-control" id="inputAnoV" placeholder="Ano do veículo*" onkeypress="return onlynumber(), mascara(this, '####')" maxlength="4" name="lname">
+                        <span id="erroAnoV"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 offset-md-2">
+                        <input type="text" class="form-control" id="inputCor" placeholder="Cor*" name="lname">
+                        <span id="erroCor"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 offset-md-2">
+                        <input type="email" class="form-control" id="inputCNH" name="lname" placeholder="Insira sua CNH e anexe o PDF abaixo*" onkeypress="return onlynumber(), mascara(this, '###########')" maxlength="11">
+                        <span id="erroCNH"></span>
+                        <br>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputPDF">
+                            <label class="custom-file-label" for="validatedCustomFile">Insira o anexo da CNH*</label>
+                        </div>
+                        <span id="erroPDF"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-8 offset-md-2">
+                    <button type="button" class="btn btn-dark" onclick="validaVeiculo()">Finalizar
+                            cadastro</button>
+                    <button type="button" class="btn btn-dark" id="btnLimpa" onclick="apagaForm()">Limpar
+                            campos</button>
+                    <button type="button" class="btn btn-dark" role="button" onclick="history.back()">Editar
+                            Dados</button>
+                </div>
+                <br><br>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="copyright text-center">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <strong>Eatit</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="popper.js/dist/umd/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

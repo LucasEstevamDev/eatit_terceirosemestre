@@ -1,0 +1,91 @@
+<!-- CONTATO -->
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eatit</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <br>
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb arr-right bg-white">
+                <li class="breadcrumb-item offset-md-1"><a href="#" onclick="history.back()" class="text-dark">Início</a></li>
+                <li class="breadcrumb-item">Contato</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <br><br>
+                <div class="col-md-10">
+                    <h2>Como podemos te ajudar?</h2>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                <span class="erro">Campos obrigatórios*</span>
+            </small>
+                </div>
+                <br>
+                <form id="form">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="name" class="form-control" id="inputNome" placeholder="Insira seu nome*">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Insira seu email*">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea class="form-control" id="textArea" placeholder="Digite sua mensagem aqui*" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div id="btn-home form-group">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-dark mr-2 col-md-12" onclick="validaContato()">Enviar Mensagem</button>
+
+                        </div>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer navbar-fixed-bottom">
+        <div class="copyright text-center">
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <span>Eatit</span>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script src="popper.js/dist/umd/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

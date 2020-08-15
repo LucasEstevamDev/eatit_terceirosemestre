@@ -1,0 +1,89 @@
+<!-- CONTATO -->
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eatit</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <br>
+    <div>
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arr-right bg-white">
+                    <li class="breadcrumb-item offset-md-1"><a href="login.html" class="text-dark">Login</a></li>
+                    <li class="breadcrumb-item">Reset de senha</li>
+                </ol>
+            </nav>
+        </div>
+        <br>
+        <div class="card col-md-4 offset-md-4">
+            <div class="card-body">
+                <div id="contato-center">
+                    <br>
+                    <div class="col-md-4 offset-md-4">
+                        <img class="banner_img" src="img/eatit.jpg">
+                    </div>
+                    <br><br>
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" id="inputEmail_reset" placeholder="Insira seu email">
+                                    <div class="invalid-feedback">Preencha este campo</div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn" data-toggle="tooltip" data-placement="right" title="Enviaremos um e-mail para que você possa cadastrar sua senha nova, 
+                                    não se esqueça de olhar sua caixa de spam.">?</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="btn-home form-group">
+                            <div>
+                                <button type="button" id="enviaContato" class="btn btn-dark col-md-12" role="button" onclick="validaEmail()">
+                                    Enviar Alteração</button>
+                            </div>
+                        </div>
+                        <br><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <footer class="footer navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="copyright text-center">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <strong>Eatit</strong>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script src="popper.js/dist/umd/popper.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>

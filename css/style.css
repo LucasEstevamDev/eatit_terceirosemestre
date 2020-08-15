@@ -1,0 +1,115 @@
+.nav-pills .nav-link.active {
+    background-color: #343a40;
+}
+
+#header_frase {
+    font-family: 'Sriracha', cursive;
+}
+
+.arr-right .breadcrumb-item+.breadcrumb-item::before {
+    content: "›";
+    vertical-align: top;
+    color: #000000;
+    font-size: 35px;
+    line-height: 18px;
+}
+
+.arr-right-white .breadcrumb-item+.breadcrumb-item::before {
+    content: "›";
+    vertical-align: top;
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 18px;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa:before {
+    content: '\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked~label i.fa:before {
+    color: #CCC;
+}
+
+.banner_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#banner {
+    background-color: grey;
+}
+
+#painel_cadastro {
+    margin-top: -13%;
+}
+
+.fa-motorcycle {
+    font-size: 48px;
+    color: rgb(20, 20, 20);
+}
+
+.fa-bicycle {
+    font-size: 48px;
+    margin-left: 10%;
+    color: rgb(20, 20, 20);
+}
+
+#icon {
+    font-size: 60px;
+    color: #000;
+}
+
+#iconAvaliacao {
+    font-size: 30px;
+}
+
+#iconRestaurante {
+    font-size: 100px;
+}
+
+footer {
+    color: #ffffff;
+    background-color: rgb(77, 77, 78);
+    height: 60px;
+    padding: 20px;
+}
+
+.erro {
+    color: rgb(255, 0, 0);
+}
+
+
+/* KEVIN */
+
+.perfil {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.progress-bar-vertical {
+    width: 25px;
+    min-height: 350px;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
+    float: left;
+}
+
+.progress-bar-vertical .progress-bar {
+    width: 100%;
+    height: 0;
+    -webkit-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    transition: height 0.6s ease;
+}

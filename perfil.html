@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eatit</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        function validadados() {
+            if (document.getElementById('teste1').value == "", document.getElementById('teste2').value == "",
+                document.getElementById('teste3').value == "", document.getElementById('teste4').value == "",
+                document.getElementById('teste5').value == "", document.getElementById('teste6').value == "",
+                document.getElementById('teste7').value == "", document.getElementById('teste8').value == "") {
+                document.getElementsByTagName("input")[0].classList.add('is-invalid');
+                teste1.focus();
+            } else {
+                alert("Dados atualizados")
+                document.getElementById('form').reset();
+            }
+        };
+
+        function validaEmail() {
+            if (document.getElementById('teste1').value == "") {
+                document.getElementById("teste1").classList.add('is-invalid');
+                teste1.focus();
+                return false;
+            } else if (document.getElementById('teste2').value == "") {
+                alert("Prencha a Data de Nascimento");
+                teste1_reset.focus();
+                return false;
+
+            } else if (document.getElementById('teste3').value == "") {
+                alert("Prencha o campo CPF/CNPJ");
+                teste1_reset.focus();
+                return false;
+            } else if (document.getElementById('teste4').value == "") {
+                alert("Insira o Endereço Cadastrado");
+                teste1_reset.focus();
+                return false;
+            } else if (document.getElementById('teste5').value == "") {
+                alert("Insira o telefone");
+                teste1_reset.focus();
+                return false;
+            } else if (document.getElementById('teste6').value == "") {
+                alert("Insira sua nova Senha ");
+                teste1_reset.focus();
+                return false;
+            } else if (document.getElementById('teste7').value == "") {
+                alert("Insira seu E-mail");
+                teste1_reset.focus();
+                return false;
+            } else if (document.getElementById('teste8').value == "") {
+                alert("Insira uma pergunta que será usada para recuperar sua senha");
+                teste1_reset.focus();
+                return false;
+            } else {
+                alert("Senha alterada com sucessso")
+                document.getElementById('form').reset();
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand h1 mb-0" href="">
+                <img src="img/eat_it_branco.png" width="60px">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSite">
+
+                <ul class="navbar-nav mr-auto ml-4">
+                    <li class="nav-item">
+                        <a class="nav-link active mr-2" href="index.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="perfil.html">Meu perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="historicocompras.html">Histórico</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item offset-md-1"><a href="index.html" class="text-dark">Home</a></li>
+                <li class="breadcrumb-item"><a href="historicocompras.html" class="text-dark">Histórico de compras</a></li>
+                <li class="breadcrumb-item active">Meu perfil</li>
+            </ol>
+        </nav>
+    </div>
+    <br>
+
+    <div class="card col-md-10 offset-md-1">
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="perfil col-md-4">
+                        <img src="img/04-1.jpg" class="banner_img img-fluid" width="30%"><br><br>
+                        <div>
+                            <button onclick="validadados()" type="button" class="btn btn-dark">Editar
+                                dados</button><br><br>
+                            <button onclick="validaEmail()" type="button" class="btn btn-dark">Alterar senha</button><br><br>
+                            <a href="historicocompras.html"> <button type="button" class="btn btn-dark">Histórico de compras</button></a><br><br>
+                            <button type="button" class="btn btn-dark">Sair</button>
+                        </div>
+                    </div>
+                    <div class="container col-sm-8">
+                        <br><br><br>
+                        <form id="form">
+                            <div class="row form-group">
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="teste1" placeholder="Nome Completo" name="input">
+                                    <br>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="teste2" placeholder="Data de nascimento">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="teste3" placeholder="CPF/CNPJ">
+                                    <br>
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <input type="text" class="form-control" id="teste4" placeholder="Endereço Cadastrado">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="teste5" placeholder="Celular" maxlength="13" name="lname">
+                                    <br>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="teste6" placeholder="Senha">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="teste7" placeholder="E-mail">
+                                    <br>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <input type="text" class="form-control" id="teste8" placeholder="Pergunta de Recuperação">
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="copyright text-center">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <strong>Eatit</strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="popper.js/dist/umd/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

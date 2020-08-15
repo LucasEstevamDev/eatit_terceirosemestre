@@ -1,0 +1,94 @@
+<!-- CONTATO -->
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eatit</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item offset-md-1"><a href="#" onclick="history.back()" class="text-dark">Início</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="history.back()" class="text-dark">Cadastro</a></li>
+                <li class="breadcrumb-item">Cartão</li>
+            </ol>
+        </nav>
+    </div>
+    <div id="cadastro_usuario" class="col-md-6 offset-md-3">
+        <br><br><br>
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <h2>Insira os dados do cartão</h2>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                <span class="erro">Campos obrigatórios*</span>
+             </small>
+                </div>
+                <br>
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputCartao" placeholder="Nome escrito no cartão*">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="inputNumCartao" placeholder="Número*" onkeypress="return onlynumber(), mascara(this, '#### #### #### ####')" maxlength="19">
+                        </div>
+                        <div class="form-group col">
+                            <input type="text" class="form-control" id="inputAnoCartao" placeholder="Ano de venc.*" onkeypress="return onlynumber(), mascara(this, '####')" maxlength="4">
+                        </div>
+                        <div class="col form-group">
+                            <input type="password" class="form-control" id="inputCodigo" placeholder="Código*" onkeypress="return onlynumber()" maxlength="3">
+                        </div>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-dark" onclick="validaCartao()">Finalizar cadastro</button>
+                    <button type="button" class="btn btn-dark" id="btnLimpa" onclick="apagaForm()">Limpar campos</button>
+                    <button type="button" class="btn btn-dark" role="button" onclick="history.back()">Editar Dados</button>
+            </div>
+        </div>
+
+    </div>
+    </form>
+    </div>
+
+    <footer class="footer navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="copyright text-center">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <span>Eatit</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="popper.js/dist/umd/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
