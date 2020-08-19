@@ -13,424 +13,259 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
-
-            <a class="navbar-brand h1 mb-0" href="">
+            <a class="navbar-brand ml-3" href="">
                 <img src="img/eat_it_branco.png" width="60px">
             </a>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSite">
-
-                <ul class="navbar-nav mr-auto ml-4">
-                    <li class="nav-item">
-                        <a class="nav-link active mr-2" href="index.html">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contato.html">Contato</a>
-                    </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown" id="navDrop">Restaurante</a>
+                        <a class="nav-link dropdown-toggle active ml-4" href="#" data-toggle="dropdown" id="navDrop">Restaurante</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="status_pedido_fornecedor.html">Status Pedidos</a>
                             <a class="dropdown-item" href="dash_financeiro.html">Dashboard</a>
                             <a class="dropdown-item" href="perfil.html">Perfil</a>
-                            <a class="dropdown-item" href="index.html">Sair</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter">Sair</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <br><br>
-    <div class="card col-md-10 offset-sm-1">
-        <div class="card-body">
-            <div class="container">
-                <div class="offset-sm-5">
+
+    <!-- BLOCO DE CONFIRMAÇÃO PARA LOGOUT -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tem certeza que deseja sair?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="window.location.href = 'login.html'">Sair</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-md-10 offset-md-1">
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col">
                     <i class="material-icons" id="iconRestaurante">restaurant_menu</i>
                 </div>
-                <div class="row">
-                    <div class="ml-3">
-                        <a>
-                            <i class=" material-icons" onclick="history.back()" id="iconRestaurante ">arrow_back</i>
-                        </a>
-                    </div>
-                    <div class="offset-sm-10 mr-4">
-                        <a>
-                            <i class=" material-icons" id="iconRestaurante ">share</i>
-                        </a>
-                    </div>
-                    <div class="ml-5">
-                        <a>
-                            <i class=" material-icons" id="iconRestaurante ">favorite</i>
-                        </a>
-                    </div>
+                <div class="col-md-4 offset-md-1">
+                    <h1>Restaurante XYZ</h1>
+                    <i class=" material-icons" id="iconRestaurante ">share</i>
+                    <i class=" material-icons" id="iconRestaurante ">favorite</i>
                 </div>
-                <br>
-                <div class="jumbotron jumbotron-fluid bg-light">
-                    <div class="container">
-                        <h1 class="display-5">Restaurante XYZ</h1>
-                        <br>
-                        <p>Categoria do restaurante</p>
-                        <p>Estimativa de 20-30 minutos</p>
-                        <p>R$ 14,00 (Frete da entrega)</p>
-                    </div>
+                <div class="col offset-md-1">
+                    <p>Categoria do restaurante</p>
+                    <p>Tempo de entrega de 20 minutos</p>
+                    <p>R$ 14,00 (Frete da entrega)</p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-8">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active text-dark" id="brasileira-tab" data-toggle="tab" href="#brasileira" role="tab" aria-controls="home" aria-selected="true">Entradas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" id="japonesa-tab" data-toggle="tab" href="#japonesa" role="tab" aria-controls="profile" aria-selected="false">Tipos de Pratos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" id="burgers-tab" data-toggle="tab" href="#burgers" role="tab" aria-controls="contact" aria-selected="false">Acompanhamentos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" id="italiana-tab" data-toggle="tab" href="#italiana" role="tab" aria-controls="contact" aria-selected="false">Bebidas</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4">
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br><br>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Entradas</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Acompanhamentos</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Sobremesas</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bebidas</a>
                 </div>
-
-
-                <br>
-                <div class="tab-content" id="myTabContent">
-                    <!-- COMIDA BRASILEIRA -->
-                    <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <a href="cardapio.html">
-                                            <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        </a>
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- COMIDA JAPONESA -->
-                    <div class="tab-pane fade" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Tem tarê?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="japonesa" role="tabpanel" aria-labelledby="japonesa-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/japonesa.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- STREET FOOD -->
-                    <div class="tab-pane fade" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/burger.jpeg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Feijoada da boa.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- COMIDA ITALIANA -->
-                    <div class="tab-pane fade" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Mangia che te fa bene.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                            <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <p class="card-text">Mangia che te fa bene.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                            <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <p class="card-text">Mangia che te fa bene.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                    <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                        <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <p class="card-text">Mangia che te fa bene.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                            <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <p class="card-text">Mangia che te fa bene.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="tab-pane fade show active" id="burgers" role="tabpanel" aria-labelledby="burgers-tab">
-                                    <div class="tab-pane fade show active" id="italiana" role="tabpanel" aria-labelledby="italiana-tab">
-                                        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-                                            <img class="card-img-top" src="img/lasanha.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <p class="card-text">Mangia che te fa bene.</p>
-                                            </div>
-                                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <div class="card">
-                    <div class="card-body">
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="row">
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tab-pane fade show active" id="brasileira" role="tabpanel" aria-labelledby="brasileira-tab">
+                                <div class="card text-white bg-dark mb-3" style="width: 16rem;">
+                                    <img class="card-img-top" src="img/feijoada.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Feijoada da boa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="card">
+            <div class="card-body">
+                <div class="">
+                    <h3>Painel de Administração</h3>
+                    <p>Complete os dados abaixo para adicionar um novo prato ao seu cardápio</p>
+                </div>
+                <form id="form">
+                    <div class="form-group">
                         <div class="">
-                            <h3>Inserir novo prato ao cardápio</h3>
+                            <input type="name" class="form-control is-validated" id="inputNome" placeholder="O nome do prato">
                         </div>
-                        <br>
-                        <form id="form">
-                            <div class="form-group">
-                                <div class="">
-                                    <input type="name" class="form-control is-validated" id="inputNome" placeholder="O nome do prato">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="">
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Valor do prato" onkeypress="return onlynumber()">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="">
-                                    <textarea class="form-control" id="textArea" placeholder="Digite a descrição do prato" rows="5"></textarea>
-                                </div>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" required>
-                                <label class="custom-file-label" for="validatedCustomFile">Escolha a foto do prato</label>
-                            </div>
-                            <br><br>
-                            <div class="">
-                                <button type="button" class="btn btn-dark" onclick="validaContato()">Adicionar ao cardápio</button>
-                            </div>
-                        </form>
                     </div>
-                </div>
-                <br>
+                    <div class="form-group">
+                        <div class="">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Valor do prato" onkeypress="return onlynumber()" onkeyup="k(this)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="">
+                            <textarea class="form-control" id="textArea" placeholder="Digite a descrição do prato" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Escolha a foto do prato</label>
+                    </div>
+                    <br><br>
+                    <div class="">
+                        <button type="button" class="btn btn-dark" onclick="validaContato()">Adicionar ao cardápio</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -438,6 +273,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
     <script src="popper.js/dist/umd/popper.js"></script>
     <script src="js/bootstrap.js"></script>

@@ -2,10 +2,6 @@
     background-color: #343a40;
 }
 
-#header_frase {
-    font-family: 'Sriracha', cursive;
-}
-
 .arr-right .breadcrumb-item+.breadcrumb-item::before {
     content: "›";
     vertical-align: top;

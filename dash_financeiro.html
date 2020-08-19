@@ -89,12 +89,29 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <button class="btn btn-light mr-sm-2" onclick="history.back()">Voltar</button>
+                            <button class="btn btn-light mr-sm-2" data-toggle="modal" data-target="#exampleModalCenter">Voltar</button>
                         </li>
 
                     </ul>
                 </div>
             </nav>
+            <!-- BLOCO DE CONFIRMAÇÃO PARA LOGOUT -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Tem certeza que deseja sair?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" onclick="window.location.href = 'login.html'">Sair</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid" id="financeiro">
                 <br>
                 <div class="card-deck">
