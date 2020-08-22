@@ -83,14 +83,11 @@
     <div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb arr-right bg-white">
-                <li class="breadcrumb-item offset-md-1"><a href="index.html" class="text-dark">Início</a></li>
-                <li class="breadcrumb-item"><a href="historicocompras.html" class="text-dark">Histórico de compras</a></li>
-                <li class="breadcrumb-item active">Meu perfil</li>
+                <li class="breadcrumb-item offset-md-1"><a onclick="window.history.go(-1)" class="text-dark"><strong>Voltar</strong></a></li>
+                <li class="breadcrumb-item">Perfil</li>
             </ol>
         </nav>
     </div>
-    <br>
-
     <div class="card col-md-10 offset-md-1">
         <div class="card-body">
             <div class="container">
@@ -102,7 +99,7 @@
                                 dados</button><br><br>
                             <button onclick="validaEmail()" type="button" class="btn btn-dark">Alterar senha</button><br><br>
                             <a href="historicocompras.html"> <button type="button" class="btn btn-dark">Histórico de compras</button></a><br><br>
-                            <button type="button" class="btn btn-dark">Sair</button>
+                            <a type="button" class="btn btn-dark text-white" href="login.html">Sair</a>
                         </div>
                     </div>
                     <div class="container col-sm-8">

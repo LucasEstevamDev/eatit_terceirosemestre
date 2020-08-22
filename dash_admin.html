@@ -65,7 +65,7 @@
 
 <body>
     <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
+        <!-- SIDEBAR -->
         <div class="bg-dark border-right" id="sidebar-wrapper">
             <div class="sidebar-heading text-white">DASHBOARD</div>
             <div class="list-group list-group-flush">
@@ -74,7 +74,7 @@
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">SISTEMA</a>
             </div>
         </div>
-        <!-- Page Content -->
+        <!-- PAGE CONTENT -->
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <button class="btn btn-dark" id="menu-toggle">
@@ -83,21 +83,35 @@
                 <a class="navbar-brand h1 offset-md-5" href="index.html">
                     <img src="img/eat_it_branco.png" width="50px">
                 </a>
-
                 <button class="navbar-toggler btn-dark bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <button class="btn btn-dark text-white mr-sm-2" onclick="history.back()">Voltar</button>
+                            <button class="btn btn-light mr-sm-2" data-toggle="modal" data-target="#exampleModalCenter">Sair</button>
                         </li>
                     </ul>
                 </div>
             </nav>
+            <!-- BLOCO DE CONFIRMAÇÃO PARA LOGOUT -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Tem certeza que deseja sair?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" onclick="window.location.href = 'login.html'">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid" id="financeiro">
                 <br>
-
                 <div class="card border-primary">
                     <div class="card-body">
                         <h5 class="card-title">Usuários cadastrados</h5>
@@ -123,7 +137,6 @@
             </div>
         </div>
     </div>
-    <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -131,7 +144,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
 
-    <!-- Menu Toggle Script -->
+    <!-- MENU TOGGLE -->
     <script>
         $("#menu-toggle").click(function(e) {
             e.preventDefault();

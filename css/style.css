@@ -73,6 +73,12 @@ h2 {
     font-size: 100px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 footer {
     color: #ffffff;
     background-color: rgb(77, 77, 78);

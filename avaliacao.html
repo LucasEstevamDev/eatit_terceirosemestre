@@ -15,11 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
-    <br>
     <div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb arr-right bg-white">
@@ -36,7 +34,8 @@
                 <div class="row col">
                     <form id="form" class="col">
                         <br>
-                        <h2>Avaliação</h2>
+                        <h2>Como foi sua experiência?</h2>
+                        <p>Sua opinião é muito importante para melhorar sua experiência em nossa plataforma.</p>
                         <small><span class="erro">Campos obrigatórios*</span></small>
                         <div class="form-group">
                             <div class="">
@@ -54,7 +53,7 @@
                                 <textarea class="form-control" id="textArea" placeholder="Descreva sua experiência*" rows="5"></textarea>
                                 <br>
                                 <div class="estrelas">
-                                    <h4>Dê sua nota</h4>
+                                    <h5>Nem só de estrelinhas viverá o Mario<small>&nbsp;(opcional)</small></h5>
                                     <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                                     <label for="cm_star-1"><i class="fa" id="iconAvaliacao"></i></label>
                                     <input type="radio" id="cm_star-1" name="fb" value="1" />
@@ -71,19 +70,34 @@
                             </div>
                         </div>
                         <div id="btn-home form-group">
-                            <div class="">
-                                <button type="button" class="btn btn-dark" onclick="validaAvaliacao()">Enviar</button>
+                            <div>
+                                <button type="button" class="btn btn-dark" data-toggle="modal" onclick="validaAvaliacao()">Enviar</button>
                                 <button type="button" class="btn btn-dark mr-2 ml-2" id="btnLimpa" onclick="apagaForm()">Limpar campos</button>
                             </div>
                         </div>
-                        <br>
                     </form>
                 </div>
             </div>
         </div>
+        <!-- MODAL DE CONFIRMAÇÃO -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Pedido finalizado!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="window.location.href = 'index.html'">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <footer class="footer navbar-fixed-bottom">
+    <br><br><br><br>
+    <footer class="navbar-fixed-bottom">
         <div class="container-fluid">
             <div class="copyright text-center">
                 &copy;

@@ -13,7 +13,7 @@ function Login() {
         window.location = "logado_entregador.html";
         return true;
     } else if (login == "admin" && senha == "admin") {
-        window.location = "dash_usuarios.html";
+        window.location = "dash_admin.html";
         return true;
     } else {
         document.getElementById("inputEmail").classList.add('is-invalid');
@@ -145,8 +145,7 @@ function validaEmail() {
         inputEmail_reset.focus();
         return false;
     } else {
-        alert("Enviamos um email com o link para alteração de senha!");
-        window.location = "index.html";
+        $('#exampleModalCenter').modal('show');
     }
 }
 
@@ -173,8 +172,7 @@ function validaContato() {
         textArea.focus();
         return false;
     } else {
-        alert("Obrigado pelo seu contato");
-        window.location = "index.html";
+        $('#exampleModalCenter').modal('show');
     }
 }
 
@@ -223,8 +221,7 @@ function validaAvaliacao() {
         textArea.focus();
         return false;
     } else {
-        alert("Pedido finalizado!")
-        window.location = "index.html";
+        $('#exampleModalCenter').modal('show');
     }
 }
 
