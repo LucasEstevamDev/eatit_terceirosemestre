@@ -80,9 +80,8 @@ function validaCadastro() {
         inputCEP.focus();
         return false;
     } else {
-        alert("Dados cadastrados");
+        $('#exampleModalCenter').modal('show');
         document.getElementById("form").classList.add('was-validated');
-        window.location = "index.html";
     }
     return false;
 }
@@ -110,8 +109,32 @@ function validaVeiculo() {
         inputPDF.focus();
         return false;
     } else {
-        alert("Dados cadastrados, enviamos um e-mail de validação")
-        window.location = "index.html";
+        $('#exampleModalCenter').modal('show');
+        document.getElementById("form").classList.add('was-validated');
+    }
+}
+
+/* VALIDAÇÃO DO CARTÃO */
+function validaCartao() {
+    if (document.getElementById('inputCartao').value == "") {
+        document.getElementById("inputCartao").classList.add('is-invalid');
+        inputCartao.focus();
+        return false;
+    } else if (document.getElementById('inputNumCartao').value == "") {
+        document.getElementById("inputNumCartao").classList.add('is-invalid');
+        inputNumCartao.focus();
+        return false;
+    } else if (document.getElementById('inputAnoCartao').value == "") {
+        document.getElementById("inputAnoCartao").classList.add('is-invalid');
+        inputAnoCartao.focus();
+        return false;
+    } else if (document.getElementById('inputCodigo').value == "") {
+        document.getElementById("inputCodigo").classList.add('is-invalid');
+        inputCodigo.focus();
+        return false;
+    } else {
+        $('#exampleModalCenter').modal('show');
+        document.getElementById("form").classList.add('was-validated');
     }
 }
 
@@ -173,30 +196,6 @@ function validaContato() {
         return false;
     } else {
         $('#exampleModalCenter').modal('show');
-    }
-}
-
-/* VALIDAÇÃO DO CARTÃO */
-function validaCartao() {
-    if (document.getElementById('inputCartao').value == "") {
-        document.getElementById("inputCartao").classList.add('is-invalid');
-        inputCartao.focus();
-        return false;
-    } else if (document.getElementById('inputNumCartao').value == "") {
-        document.getElementById("inputNumCartao").classList.add('is-invalid');
-        inputNumCartao.focus();
-        return false;
-    } else if (document.getElementById('inputAnoCartao').value == "") {
-        document.getElementById("inputAnoCartao").classList.add('is-invalid');
-        inputAnoCartao.focus();
-        return false;
-    } else if (document.getElementById('inputCodigo').value == "") {
-        document.getElementById("inputCodigo").classList.add('is-invalid');
-        inputCodigo.focus();
-        return false;
-    } else {
-        alert("Dados cadastrados, enviamos um e-mail de validação do cadastro")
-        window.location = "index.html";
     }
 }
 

@@ -58,7 +58,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col">
-                        <input type="email" class="form-control" id="inputCNH" name="lname" placeholder="Insira sua CNH e anexe o PDF abaixo*" onkeypress="return onlynumber(), mascara(this, '###########')" maxlength="11">
+                        <input type="text" class="form-control" id="inputCNH" name="lname" placeholder="Insira sua CNH e anexe o PDF abaixo*" onkeypress="return onlynumber(), mascara(this, '###########')" maxlength="11">
                         <span id="erroCNH"></span>
                         <br>
                         <div class="custom-file">
@@ -70,7 +70,7 @@
                 </div>
                 <br>
                 <div class="col">
-                    <button type="button" class="btn btn-dark" onclick="validaVeiculo()">Finalizar
+                    <button type="button" class="btn btn-dark" data-toggle="modal" onclick="validaVeiculo()">Finalizar
                             cadastro</button>
                     <button type="button" class="btn btn-dark" id="btnLimpa" onclick="apagaForm()">Limpar
                             campos</button>
@@ -80,6 +80,22 @@
                 <br><br>
             </div>
         </form>
+    </div>
+    <!-- MODAL DE CONFIRMAÇÃO -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cadastro realizado com sucesso! <br> Enviamos um e-mail para autenticar seu acesso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="window.location.href = 'login.html'">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer navbar-fixed-bottom">
