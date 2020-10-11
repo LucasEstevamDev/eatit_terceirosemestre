@@ -1,124 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Eatit</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb arr-right bg-white">
-                <li class="breadcrumb-item offset-md-1"><a href="index.html" class="text-dark">Início</a></li>
-                <li class="breadcrumb-item"><a href="cardapio.html" class="text-dark">Cardápio</a></li>
-                <li class="breadcrumb-item">Finalizar</li>
-            </ol>
-        </nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb arr-right bg-white">
+          <li class="breadcrumb-item offset-md-1">
+            <a href="index.html" class="text-dark">Início</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="cardapio.html" class="text-dark">Cardápio</a>
+          </li>
+          <li class="breadcrumb-item">Finalizar</li>
+        </ol>
+      </nav>
     </div>
-    <br>
+    <br />
     <div class="col-md-10 offset-sm-1">
-        <div class="container col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row offset-sm-1">
-                        <i class="material-icons mr-1">
-                                    menu_book</i>
-                        <p>Resumo do pedido</p>
-                    </div>
-                    <br>
-                    <div class="row offset-sm-1">
-                        <div class="row col">
-                            <p>Frango a parmegiana</p>
-                            <div class="row offset-sm-5">
-                                <i class="material-icons mr-1">attach_money</i>
-                                <p>22,00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <div class="row offset-sm-1">
+              <i class="material-icons mr-1"> menu_book</i>
+              <p>Resumo do pedido</p>
             </div>
-            <br>
-            <div class="row">
-                <div class="input-group mb-3 col-md-10">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input type="checkbox" aria-label="Checkbox for following text input">
-                        </div>
-                    </div>
-                    <input type="text" class="form-control" Value="Visa   ********8052">
+            <br />
+            <div class="row offset-sm-1">
+              <div class="row col">
+                <p>Frango a parmegiana</p>
+                <div class="row offset-sm-5">
+                  <i class="material-icons mr-1">attach_money</i>
+                  <p>22,00</p>
                 </div>
-                <div class="col">
-                    <a href="#" class="btn btn-dark col-md-12">Trocar</a>
-                </div>
+              </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <div class="row offset-sm-1">
-                        <p>Deseja incluir CPF na nota?</p>
-                    </div>
-                    <div class="row offset-sm-1">
-                        <div class="row col">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Sim</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Não</label>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row col-md-8 offset-sm-1">
-                        <input type="text" class="form-control" placeholder="Insira aqui o CPF" onkeypress="return onlynumber()">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="input-group mb-3 col-md-10">
-                    <input type="text" class="form-control" Value="Avenida Liberdade, 206">
-                </div>
-                <div class="col">
-                    <a href="#" class="btn btn-dark col-md-12">Trocar</a>
-                </div>
-            </div>
-            <div class="">
-                <a class="btn btn-success" href="avaliacao.html">Finalizar</a>
-                <button class="btn btn-danger">Remover</button>
-            </div>
-
+          </div>
         </div>
+        <br />
+        <div class="row">
+          <div class="input-group mb-3 col-md-10">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+              </div>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              value="Visa   ********8052"
+            />
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-dark col-md-12">Trocar</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="row offset-sm-1">
+              <p>Deseja incluir CPF na nota?</p>
+            </div>
+            <div class="row offset-sm-1">
+              <div class="row col">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineRadio1">Sim</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="inlineRadio2">Não</label>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="row col-md-8 offset-sm-1">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Insira aqui o CPF"
+                onkeypress="return onlynumber()"
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="input-group mb-3 col-md-10">
+            <input
+              type="text"
+              class="form-control"
+              value="Avenida Liberdade, 206"
+            />
+          </div>
+          <div class="col">
+            <a href="#" class="btn btn-dark col-md-12">Trocar</a>
+          </div>
+        </div>
+        <div class="">
+          <a class="btn btn-success" href="avaliacao.html">Finalizar</a>
+          <button class="btn btn-danger">Remover</button>
+        </div>
+      </div>
     </div>
-    <br><br>
-    <footer class="navbar-fixed-bottom">
-        <div class="container-fluid">
-            <div class="copyright text-center">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <span>Eatit</span>
-            </div>
+    <br /><br />
+    <footer class="footer navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="copyright text-center">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          <span>Eatit</span>
         </div>
+      </div>
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+      crossorigin="anonymous "
+    ></script>
     <script src="popper.js/dist/umd/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
